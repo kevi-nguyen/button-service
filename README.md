@@ -1,4 +1,5 @@
 # Button-Service
+This repository contains a RESTful service that provides a GET /wait_for_button endpoint. When called, the service waits for a physical button to be pressed and returns once the press is detected. If the button is not pressed within 3 minutes, the request will timeout.
 
 ## Installation
 
@@ -20,6 +21,8 @@
    python Button-API.py
    ```
    This will start the FastAPI service on `http://0.0.0.0:8082`.
+
+## Required Adjustments
 
 **Serial Port Adjustment**:
 If you're using a button connected via a serial port, the `port` variable in the code needs to match the serial port available on your computer.
